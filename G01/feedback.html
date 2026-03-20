@@ -142,22 +142,86 @@
 
     <section class="feedback">
         <h1>FEEDBACK</h1><br>
-        <p class="feedback-intro">We value your feedback! Please share your thoughts and suggestions to help us improve OceanGuard. Your input is crucial in our mission to protect the oceans and create a better future for marine life. Whether it's a feature you'd like to see, a bug you've encountered, or just general feedback, we want to hear from you. Together, we can make OceanGuard an even more powerful tool for ocean conservation!</p>
+        <p class="feedback-intro">We value your feedback! Please share your thoughts and suggestions
+                                  to help us improve OceanGuard. Your input is crucial in our mission to<br>
+                                   protect the oceans and create a better future for marine life. Whether
+                                    it's a feature you'd like to see, a bug you've encountered, or just general<br>
+                                     feedback, we want to hear from you. Together, we can make OceanGuard an
+                                     even more powerful tool for ocean conservation!</p>
 
-        <form action="submit_feedback.php" method="post" class="feedback-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <form action="mailto:minutha12@gmail.com" method="post" class="feedback-form">
+            <div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required Placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>How did you hear about us?</label>
+                    <select name="source">
+                        <option>Social Media</option>
+                        <option>Friend</option>
+                <option>Website</option>
+
+            </select>
+             <div class="rating">
+                <span data-value="1">★</span>
+                <span data-value="2">★</span>
+                <span data-value="3">★</span>
+                <span data-value="4">★</span>
+                <span data-value="5">★</span>
+            </div>
+
+            <input type="hidden" name="rating" id="ratingValue">
+            </div>
 
             <button type="submit">Submit Feedback</button>
         </form>
 
     </section>
+    <script>
+        const stars = document.querySelectorAll(".rating span");
+        const ratingValue = document.getElementById("ratingValue");
+
+        stars.forEach((star, index) => {
+            star.addEventListener("click", () => {
+                ratingValue.value = index + 1;
+
+                stars.forEach(s => s.classList.remove("active"));
+
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add("active");
+                }
+            });
+        });
+
+
+</script>
+
+ <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <p class="sdg-label">SUSTAINABLE<br>DEVELOPMENT</p>
+                <p class="sdg-goals">G&#127760;ALS</p>
+            </div>
+            <div class="footer-editors">
+                <h3>Page Editors</h3>
+                <a href="pageEditor_ST1.html">Student 1</a>
+                <a href="pageEditor_ST2.html">Student 2</a>
+                <a href="pageEditor_ST3.html">Student 3</a>
+                <a href="pageEditor_ST4.html">Student 4</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

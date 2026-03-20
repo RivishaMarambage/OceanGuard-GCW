@@ -45,6 +45,7 @@ body {
     overflow: hidden;
     padding: 60px 20px;
     color: white;
+    height: 100vh;
 }
 
 .bg-video {
@@ -53,8 +54,85 @@ body {
     left: 50%;
     transform:translate(-50%,-50%);
 
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+
+.feedback h1 {
+    font-size: 120px;
+    text-align: center;
+    color: white;
+    letter-spacing: 20px;
+}
+
+.feedback-intro {
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    opacity: 0.5;
+}
+
+.feedback-form {
+    max-width: 900px;
+    margin: 100px auto;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+}
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.feedback-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.feedback-form button:hover {
+    background-color: #555;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    font-size: 19px;
+}
+
+select {
+    margin-bottom: 50px;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.rating {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.rating span {
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+    transition: 0.3s;
+}
+
+.rating span.active {
+    color: orange;
+    transform: scale(1.2);
 }
