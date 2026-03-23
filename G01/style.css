@@ -1105,3 +1105,92 @@ tbody tr:hover {
     white-space: nowrap;
     border-width: 0;
 }
+
+/* ---------- Editor Layout ---------- */
+.editor-layout {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.editor-main-content {
+    flex: 1;
+    border: 2px solid rgba(0, 180, 216, 0.4);
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(3, 4, 94, 0.05); /* Soft shadow for theme */
+}
+
+/* ---------- Editor Sidebar Navigation ---------- */
+.sidebar-nav {
+    background: #ffffff;
+    border: 2px solid rgba(0, 180, 216, 0.4);
+    padding: 20px 24px;
+    border-radius: 14px;
+    margin: 0; /* Remove right float margins */
+    width: 250px;
+    flex: 0 0 250px; /* Keep sidebar from shrinking */
+    box-shadow: none; /* No shadow per image */
+    position: sticky;
+    top: 100px; /* Keep it visible while scrolling */
+}
+
+.sidebar-nav .sidebar-title {
+    color: #03045e; /* Deep Twilight for better contrast */
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: none; /* No line in screenshot */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-nav ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: #0077b6; /* Teal color for dots/text */
+    font-weight: 500;
+}
+
+.sidebar-nav > ul > li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0096c7;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar-nav ul ul {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.sidebar-nav ul ul li {
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+.sidebar-nav ul ul li::before {
+    content: '◦';
+    font-size: 14px;
+    left: 0;
+}
+
+.sidebar-nav a {
+    color: #0077b6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+    color: #00b4d8;
+    text-decoration: underline;
+}

@@ -39,13 +39,36 @@
 
 
         <!-- Hero Banner -->
-        <section class="hero" aria-label="Validation page banner">
+        <section class="hero" id="top" aria-label="Validation page banner">
             <h1>Validation Evidence – Student 1</h1>
-            <p>HTML and CSS validation results for all pages implemented by Student 1.</p>
+            <p>Student Name: Rivisha Marambage, Team Name: WebDev Group 4, Role: Student 1</p>
         </section>
 
-        <!-- Instructions -->
-        <section class="editor-article">
+        <!-- Container for Sidebar and Main Content -->
+        <div class="editor-layout">
+            <!-- Core Pages Navigation -->
+            <aside class="sidebar-nav">
+            <p><a href="#top">Go top</a></p>
+            <h3 class="sidebar-title">Core pages developed:</h3>
+            <ul>
+                <li>Student 1
+                    <ul>
+                        <li><a href="pageEditor_ST1.html#home-page">Home page</a></li>
+                        <li><a href="pageEditor_ST1.html#gallery-page">Gallery</a></li>
+                        <li><a href="pageEditor_ST1.html#content-page">Content</a></li>
+                    </ul>
+                </li>
+                <li><a href="pageEditor_ST1.html#challenges-section">Challenges and Lessons Learned</a></li>
+                <li><a href="pageEditor_ST1.html#compliance-section">Compliance</a></li>
+                <li><a href="pageEditor_ST1.html#meeting-log-section">Group Meetings and Individual Contribution Log</a></li>
+                <li><a href="pageEditor_ST1.html#references-section">References</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="editor-main-content">
+            <!-- Instructions -->
+            <section class="editor-article">
             <h2>📋 Validation Process</h2>
             <p>Each page was validated using the <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C
                     Markup Validation Service</a> and the <a href="https://jigsaw.w3.org/css-validator/" target="_blank"
@@ -56,8 +79,9 @@
         </section>
 
         <!-- ===== Validation: home.html ===== -->
-        <section class="validation-section">
-            <h2>🏠 home.html – Home Page</h2>
+        <section class="validation-section" id="val-home">
+            <h2>🏠 home.html – Home Page validation report</h2>
+            <p><a href="pageEditor_ST1.html#home-page">Back to Page Editor page</a></p>
             <h3>HTML Validation</h3>
             <!-- Screenshot placeholder – replace with actual screenshot -->
             <div class="screenshot-placeholder">
@@ -82,11 +106,15 @@
                 <li>Page includes proper <code>&lt;meta&gt;</code> tags for charset, viewport, and description</li>
                 <li>All anchor links use valid <code>href</code> attributes</li>
             </ul>
+            <h3>Reflection</h3>
+            <p>The Home Page validation passed successfully, confirming structural integrity and correct use of semantic HTML and custom CSS. Validating early prevented browser compatibility issues.</p>
+            <p><a href="#top">Go top</a></p>
         </section>
 
         <!-- ===== Validation: gallery.html ===== -->
-        <section class="validation-section">
-            <h2>🖼️ gallery.html – Gallery Page</h2>
+        <section class="validation-section" id="val-gallery">
+            <h2>🖼️ gallery.html – Gallery Page validation report</h2>
+            <p><a href="pageEditor_ST1.html#gallery-page">Back to Page Editor page</a></p>
             <h3>HTML Validation</h3>
             <div class="screenshot-placeholder">
                 <p>📸 <strong>Screenshot Placeholder</strong></p>
@@ -111,11 +139,15 @@
                 <li>JavaScript uses <code>addEventListener</code> (no inline event handlers)</li>
                 <li>No JavaScript console errors when tested in Chrome, Firefox, and Edge</li>
             </ul>
+            <h3>Reflection</h3>
+            <p>Validating the Gallery Page was crucial due to the added JavaScript DOM manipulation. The clean results confirm that custom data attributes and semantic markup integrate correctly without breaking HTML5 standards.</p>
+            <p><a href="#top">Go top</a></p>
         </section>
 
         <!-- ===== Validation: content_ST1.html ===== -->
-        <section class="validation-section">
-            <h2>📄 content_ST1.html – Content Page</h2>
+        <section class="validation-section" id="val-content">
+            <h2>📄 content_ST1.html – Content Page validation report</h2>
+            <p><a href="pageEditor_ST1.html#content-page">Back to Page Editor page</a></p>
             <h3>HTML Validation</h3>
             <div class="screenshot-placeholder">
                 <p>📸 <strong>Screenshot Placeholder</strong></p>
@@ -138,6 +170,9 @@
                 <li>All text content is wrapped in semantic block elements</li>
                 <li>Colour contrast ratios meet WCAG AA standards</li>
             </ul>
+            <h3>Reflection</h3>
+            <p>Validating the Content Page ensured accessibility compliance and proper document outlining. Correct semantic structuring allows screen readers to navigate the content effectively.</p>
+            <p><a href="#top">Go top</a></p>
         </section>
 
         <!-- Summary -->
@@ -178,6 +213,9 @@
                 </tbody>
             </table>
         </section>
+
+        </div> <!-- End editor-main-content -->
+        </div> <!-- End editor-layout -->
 
     </main>
 

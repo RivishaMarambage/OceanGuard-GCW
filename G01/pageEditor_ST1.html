@@ -37,14 +37,37 @@
     <main id="main-content">
 
         <!-- Hero Banner -->
-        <section class="hero" aria-label="Page editor banner">
+        <section class="hero" id="top" aria-label="Page editor banner">
             <h1>Page Editor – Student 1</h1>
             <p>Documentation of pages implemented, techniques used, accessibility considerations, and team
                 collaboration.</p>
         </section>
 
-        <!-- Student Name and Role -->
-        <article class="editor-article">
+        <!-- Container for Sidebar and Main Content -->
+        <div class="editor-layout">
+            <!-- Core Pages Navigation -->
+            <aside class="sidebar-nav">
+            <p><a href="#top">Go top</a></p>
+            <h3 class="sidebar-title">Core pages developed:</h3>
+            <ul>
+                <li>Student 1
+                    <ul>
+                        <li><a href="#home-page">Home page</a></li>
+                        <li><a href="#gallery-page">Gallery</a></li>
+                        <li><a href="#content-page">Content</a></li>
+                    </ul>
+                </li>
+                <li><a href="#challenges-section">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance-section">Compliance</a></li>
+                <li><a href="#meeting-log-section">Group Meetings and Individual Contribution Log</a></li>
+                <li><a href="#references-section">References</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="editor-main-content">
+            <!-- Student Name and Role -->
+            <article class="editor-article">
             <h2>👤 Student Information</h2>
             <p><strong>Name:</strong> Rivisha Marambage</p>
             <p><strong>Role:</strong> Student 1 – Template, Home Page, Gallery</p>
@@ -101,7 +124,8 @@
             </ul>
 
             <!-- Home Page -->
-            <h3>Home Page (home.html)</h3>
+            <h3 id="home-page">Home Page</h3>
+            <h4>Technical Description</h4>
             <p>The home page uses the shared template and includes:</p>
             <ul>
                 <li><strong>Hero section:</strong> Full-width banner with gradient background and SVG wave decoration
@@ -118,9 +142,14 @@
                 <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;div&gt;</code>,
                 <code>&lt;span&gt;</code>
             </p>
+            <h4>Accessibility</h4>
+            <p>Semantic structuring ensures screen readers can navigate easily. Alt texts were provided for all images, and color contrast ratios were tested to meet WCAG standards. Navigation is keyboard accessible with focus indicators.</p>
+            <p><a href="validation_ST1.html#val-home">Link to the validation page</a></p>
+            <p><a href="home.html">Link to the page</a></p>
 
             <!-- Gallery Page -->
-            <h3>Gallery Page (gallery.html)</h3>
+            <h3 id="gallery-page">Gallery Page</h3>
+            <h4>Technical Description</h4>
             <p>The gallery page includes six ocean conservation images in a responsive grid with full JavaScript
                 interactivity:</p>
             <ul>
@@ -135,9 +164,14 @@
             <p><strong>JavaScript techniques:</strong> <code>querySelectorAll</code>, <code>addEventListener</code>,
                 <code>classList.add/remove</code>, <code>getAttribute</code>, DOM style manipulation
             </p>
+            <h4>Accessibility</h4>
+            <p>All gallery items have <code>tabindex="0"</code> and keyboard event listeners for Space and Enter. The modal is assigned <code>role="dialog"</code> and <code>aria-modal="true"</code>, and can be closed using the Escape key to ensure smooth keyboard usability.</p>
+            <p><a href="validation_ST1.html#val-gallery">Link to the validation page</a></p>
+            <p><a href="gallery.html">Link to the page</a></p>
 
             <!-- Content Page -->
-            <h3>Content Page (content_ST1.html)</h3>
+            <h3 id="content-page">Content Page</h3>
+            <h4>Technical Description</h4>
             <p>The content page covers "Plastic Pollution &amp; Ocean Protection" with:</p>
             <ul>
                 <li><strong>Internal navigation:</strong> Anchor links to four page sections using <code>id</code>
@@ -150,10 +184,20 @@
                 <li><strong>Go To Top button:</strong> CSS <code>position: fixed</code> button linked to a top anchor —
                     no JavaScript used</li>
             </ul>
+            <h4>Accessibility</h4>
+            <p>High-contrast colors and semantic heading structures improve overall readability. The internal anchor links help users with assistive technologies to seamlessly jump between relevant sections.</p>
+            <p><a href="validation_ST1.html#val-content">Link to the validation page</a></p>
+            <p><a href="content_ST1.html">Link to the page</a></p>
+        </article>
+
+        <!-- Challenges and Lessons Learned -->
+        <article class="editor-article" id="challenges-section">
+            <h2>🧠 Challenges and Lessons Learned</h2>
+            <p>A primary challenge was implementing the JavaScript gallery modal without relying on external libraries. Tracking focus states and ensuring the modal was fully keyboard-accessible required extensive logic refactoring. From this, I learned the importance of native DOM APIs and ARIA roles for inclusive design.</p>
         </article>
 
         <!-- Accessibility Section -->
-        <article class="editor-article">
+        <article class="editor-article" id="accessibility-section">
             <h2>♿ Accessibility</h2>
             <ul>
                 <li><strong>Alt text:</strong> Every <code>&lt;img&gt;</code> element includes descriptive
@@ -179,7 +223,7 @@
         </article>
 
         <!-- JANET Compliance -->
-        <article class="editor-article">
+        <article class="editor-article" id="compliance-section">
             <h2>🔒 JANET Compliance</h2>
             <p>This website adheres to responsible web publishing standards as required by the JANET Acceptable Use
                 Policy:</p>
@@ -202,7 +246,7 @@
         </article>
 
         <!-- Group Meeting Log -->
-        <article class="editor-article">
+        <article class="editor-article" id="meeting-log-section">
             <h2>📅 Group Meeting Log</h2>
             <table>
                 <thead>
@@ -269,7 +313,7 @@
         </article>
 
         <!-- References Section -->
-        <article class="editor-article">
+        <article class="editor-article" id="references-section">
             <h2>📚 References</h2>
             <ul>
                 <li>United Nations. (2024). <em>Sustainable Development Goal 14: Life Below Water</em>. Available at:
@@ -290,6 +334,8 @@
                     https://developer.mozilla.org</li>
             </ul>
         </article>
+        </div> <!-- End editor-main-content -->
+        </div> <!-- End editor-layout -->
 
     </main>
 
