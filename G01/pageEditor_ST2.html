@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="Style_ST2.css">
-        <title>Page Editor – Student 2 </title>
-        <meta name="description" content="Page editor documentation for Student 1 detailing template structure, pages implemented, accessibility, and meeting logs.">
 
-    </head>
-    <body>
-            <!-- Top anchor for Go To Top button -->
-    <a id="top"></a>
-        <header class="site-header">
-            <div class="header-container">
-             <div class="logo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor – Student 2 | OceanGuard</title>
+    <meta name="description"
+        content="Page editor documentation for Student 1 detailing template structure, pages implemented, accessibility, and meeting logs.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== Header with Navigation ===== -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
                 <img src="images/abstract-blue-swirling-vortex-digital-art-piece.png" alt="OceanGuard Logo" class="nav-logo">
             </div>
-            
-           
-            <nav class="site-nav" aria-label="Main Navigation">
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
@@ -29,18 +28,48 @@
                     <li><a href="sitemap.html">Sitemap</a></li>
                 </ul>
             </nav>
+            <!-- User Profile Icon -->
             <a href="profile.html" class="profile-icon" aria-label="User Profile" title="User Profile">👤 Profile</a>
         </div>
-        </header>
-        
-        <main class="main-content">
-                <section class="hero" aria-label="Page editor banner">
-                <h1>Page Editor – Student2</h1>
-                <p>Documentation of pages implemented, techniques used, accessibility considerations, and team
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+        <!-- Hero Banner -->
+        <section class="hero" id="top" aria-label="Page editor banner">
+            <h1>Page Editor – Student 2</h1>
+            <p>Documentation of pages implemented, techniques used, accessibility considerations, and team
                 collaboration.</p>
-                </section>
-                <section class="about">
-                    <h2>👤 Personal Information</h2>
+        </section>
+
+        <!-- Container for Sidebar and Main Content -->
+        <div class="editor-layout">
+            <!-- Core Pages Navigation -->
+            <aside class="sidebar-nav">
+            <p><a href="#top">Go top</a></p>
+            <h3 class="sidebar-title">Core pages developed:</h3>
+            <ul>
+                <li>Student 2
+                        <ul>
+                            <li><a href="pageEditor_ST2.html#splash-page">Splash page</a></li>
+                            <li><a href="pageEditor_ST2.html#ais-page">Action Impact Simulator</a></li>
+                            <li><a href="pageEditor_ST2.html#content-page">Content</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pageEditor_ST2.html#challenges-section">Challenges and Lessons Learned</a></li>
+                    <li><a href="pageEditor_ST2.html#compliance-section">Compliance</a></li>
+                    <li><a href="pageEditor_ST2.html#meeting-log-section">Group Meetings and Individual Contribution
+                            Log</a></li>
+                    <li><a href="pageEditor_ST2.html#references-section">References</a></li>
+                </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="editor-main-content">
+            <!-- Student Name and Role -->
+            <section class="about">
+            <h2>👤 Personal Information</h2>
                     <p><strong>Name : </strong>Amanya Minduli Rubasinghe</p>
                     <p><strong>Role :</strong>Student 2 - Splash Screen , Action Impact Simulator</p>
                     <p><strong>Student Id:</strong>20250168/W2181528</p>
@@ -49,21 +78,11 @@
                                                     Impact Simulator (AIS) with JavaScript scoring 
                                                     and dynamic backgrounds, and Content Page .
                     </p>
-
-                </section>
-                <section class="about">
-                    <h2>📄 Completed Tasks</h2>
-                    <ul>
-                        <li>Created the Splash Screen to introduce the website</li>
-                        <li>Developed the Action Impact Simulator with interactive features</li>
-                        <li>Designed and implemented the content page on coral reef protection</li>
-                        <li>Integrated all pages with navigation and footer</li>
-                        <li>Ensured consistent design using HTML, CSS, and JavaScript</li>
-                    </ul>
-                </section>
-                <section class="about">
+            </section>
+        <!-- Pages Implemented -->
+       <section class="about">
                     <h2>📄 Pages Implemented</h2>
-                    <h3>Splash Screen (splash.html)</h3>
+                    <h3 id="splash-page">Splash Screen (splash.html)</h3>
                     <p>The splash screen serves as the first point of interaction for users visiting the OceanGuard</p>
                     <ul>
                         <li><strong>Purpose:</strong>
@@ -100,10 +119,12 @@
                                 <li>Skip button redirects to home page</li>
                             </ul>
                         
-                        </li>  
-                        <li><strong>Page Link:</strong> <a href="splash.html" target="_blank">splash.html</a></li>  
+                        </li> 
+                        <p><a href="Validation_ST2.html#splash">Link to the validation page</a></p>
+                         <p><a href="splash.html">Link to the page</a></p> 
+                       
                     </ul>
-                    <h2>Action Impact Simulator (ais.html)</h2>
+                    <h3 id="ais-page">Action Impact Simulator (ais.html)</h2>
                     <p>An interactive page where users select ocean conservation actions and receive dynamic impact feedback:</p>
                     <ul>
                         <li><strong>Purpose:</strong> Allows users to select ocean-friendly actions and calculate their environmental impact.</li>
@@ -112,9 +133,10 @@
                         <li><strong>CSS:</strong> Uses a grid layout, hover effects, borders, transitions, and colour-based feedback for different impact levels.</li>
                         <li><strong>JavaScript:</strong> Includes functions to select and deselect cards, calculate the total score, update the feedback message, show the impact level, and reset the simulator.</li>
                         <li><strong>Interactive Effect:</strong> The background image changes based on the final score to make the page more dynamic.</li>
-                        <li><strong>Page Link:</strong> <a href="ais.html" target="_blank">ais.html</a></li>
+                        <p><a href="Validation_ST2.html#Ais">Link to the validation page</a></p>
+                         <p><a href="ais.html">Link to the page</a></p> 
                     </ul>
-                    <h2>Content Page</h2>
+                    <h3 id="content-page">Content Page</h3>
                     <ul>
                         <li><strong>Topic:</strong> Coral Reef Protection and Sustainability.</li>
                         <li><strong>Structure:</strong> Includes a hero section, internal navigation menu, and four main sections on coral reefs, threats, effects on marine life, and student actions.</li>
@@ -122,12 +144,11 @@
                         <li><strong>CSS:</strong> Uses classes such as <code>content-st_2</code> and <code>Sub_content</code>, with Flexbox to align text and images side by side.</li>
                         <li><strong>Design:</strong> Combines text and images to make the page more engaging and easier to understand.</li>
                         <li><strong>Purpose:</strong> Supports SDG 14 by explaining coral reef importance and showing realistic actions students can take.</li>
-                        <li><strong>Page Link:</strong> <a href="content_ST2.html" target="_blank">content_ST2.html</a></li>
-                    </ul>
-                    
+                        <p><a href="Validation_ST2.html#content">Link to the validation page</a></p>
+                        <p><a href="content_ST2.html">Link to the page</a></p> 
                 </section>
-                <section class="about">
-                     <h2>Challenges and Lessons Learned</h2>
+                <section class="about" id="challenges-section">
+                     <h2 >Challenges and Lessons Learned</h2>
                     <ul>
                         <li>Faced challenges with JavaScript logic in the Action Impact Simulator.</li>
                         <li>Worked on keeping text readable over strong background images, especially on the splash screen.</li>
@@ -136,7 +157,7 @@
                         <li>Developed better skills in structuring long pages with sections and internal navigation.</li>
                     </ul>
                 </section>
-                <section class="about">
+                <section class="about" id="accessibility-section">
                     <h2>♿ Accessibility</h2>
                     <ul>
                         <li>Used clear and logical heading structure across all pages.</li>
@@ -146,7 +167,7 @@
                         <li>Used internal navigation on the content page to help users move through long content more easily.</li>
                     </ul>
                 </section>
-                 <section class="about">
+                 <section class="about" id="compliance-section">
                     <h2>🔒 JANET Compliance</h2>
                     <ul>
                         <li>The content is educational, relevant, and suitable for academic coursework.</li>
@@ -155,113 +176,125 @@
                         <li>The website promotes awareness of sustainability and marine conservation.</li>
                     </ul>
                 </section>
-                        <!-- Group Meeting Log -->
-                <section class="about">
-                    <h2>📅 Group Meeting Log</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Format</th>
-                                <th>Objective</th>
-                                <th>Attendance</th>
-                                <th>Individual Contribution</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>15 Jan 2025</td>
-                                <td>10:00 AM</td>
-                                <td>In-person</td>
-                                <td>Project kickoff – topic selection and role assignment</td>
-                                <td>All 4 members</td>
-                                <td>Proposed SDG 14 topic and volunteered for template/home page role</td>
-                            </tr>
-                            <tr>
-                                <td>22 Jan 2025</td>
-                                <td>2:00 PM</td>
-                                <td>Online (Teams)</td>
-                                <td>Design planning – colour scheme, layout, and content outline</td>
-                                <td>All 4 members</td>
-                                <td>Designed the ocean colour palette and shared template wireframe</td>
-                            </tr>
-                            <tr>
-                                <td>05 Feb 2025</td>
-                                <td>11:00 AM</td>
-                                <td>In-person</td>
-                                <td>Progress check – template and navigation review</td>
-                                <td>3 of 4 members</td>
-                                <td>Demonstrated completed template and navigation bar, received feedback</td>
-                            </tr>
-                            <tr>
-                                <td>19 Feb 2025</td>
-                                <td>3:00 PM</td>
-                                <td>Online (Teams)</td>
-                                <td>Integration – combining individual pages into shared structure</td>
-                                <td>All 4 members</td>
-                                <td>Integrated all team members' content pages into the shared template</td>
-                            </tr>
-                            <tr>
-                                <td>05 Mar 2025</td>
-                                <td>10:00 AM</td>
-                                <td>In-person</td>
-                                <td>Testing – cross-browser testing and bug fixes</td>
-                                <td>All 4 members</td>
-                                <td>Fixed responsive layout issues and validated HTML on all pages</td>
-                            </tr>
-                            <tr>
-                                <td>12 Mar 2025</td>
-                                <td>1:00 PM</td>
-                                <td>Online (Teams)</td>
-                                <td>Final review – documentation, validation, and submission prep</td>
-                                <td>All 4 members</td>
-                                <td>Completed page editor documentation and validation screenshots</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+        <!-- Group Meeting Log -->
+        <article class="editor-article" id="meeting-log-section">
+            <h2>📅 Group Meeting Log</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Format</th>
+                        <th>Objective</th>
+                        <th>Attendance</th>
+                        <th>Individual Contribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15 Jan 2025</td>
+                        <td>10:00 AM</td>
+                        <td>In-person</td>
+                        <td>Project kickoff – topic selection and role assignment</td>
+                        <td>All 4 members</td>
+                        <td>Proposed SDG 14 topic and volunteered for template/home page role</td>
+                    </tr>
+                    <tr>
+                        <td>22 Jan 2025</td>
+                        <td>2:00 PM</td>
+                        <td>Online (Teams)</td>
+                        <td>Design planning – colour scheme, layout, and content outline</td>
+                        <td>All 4 members</td>
+                        <td>Designed the ocean colour palette and shared template wireframe</td>
+                    </tr>
+                    <tr>
+                        <td>05 Feb 2025</td>
+                        <td>11:00 AM</td>
+                        <td>In-person</td>
+                        <td>Progress check – template and navigation review</td>
+                        <td>3 of 4 members</td>
+                        <td>Demonstrated completed template and navigation bar, received feedback</td>
+                    </tr>
+                    <tr>
+                        <td>19 Feb 2025</td>
+                        <td>3:00 PM</td>
+                        <td>Online (Teams)</td>
+                        <td>Integration – combining individual pages into shared structure</td>
+                        <td>All 4 members</td>
+                        <td>Integrated all team members' content pages into the shared template</td>
+                    </tr>
+                    <tr>
+                        <td>05 Mar 2025</td>
+                        <td>10:00 AM</td>
+                        <td>In-person</td>
+                        <td>Testing – cross-browser testing and bug fixes</td>
+                        <td>All 4 members</td>
+                        <td>Fixed responsive layout issues and validated HTML on all pages</td>
+                    </tr>
+                    <tr>
+                        <td>12 Mar 2025</td>
+                        <td>1:00 PM</td>
+                        <td>Online (Teams)</td>
+                        <td>Final review – documentation, validation, and submission prep</td>
+                        <td>All 4 members</td>
+                        <td>Completed page editor documentation and validation screenshots</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
 
-                <!-- References Section -->
-                <section class="about">
-                    <h2>📚 References</h2>
-                    <ul>
-                        <li>United Nations. (2024). <em>Sustainable Development Goal 14: Life Below Water</em>. Available at:
-                            https://sdgs.un.org/goals/goal14</li>
-                        <li>Ocean Conservancy. (2024). <em>Fighting for Trash Free Seas</em>. Available at:
-                            https://oceanconservancy.org</li>
-                        <li>The Ocean Cleanup. (2024). <em>Developing Advanced Technologies to Rid the Oceans of Plastic</em>.
-                            Available at: https://theoceancleanup.com</li>
-                        <li>UNEP. (2024). <em>Marine Litter and Microplastics</em>. United Nations Environment Programme.
-                            Available at:
-                            https://www.unep.org/explore-topics/oceans-seas/what-we-do/addressing-land-based-pollution/marine-litter-and
-                        </li>
-                        <li>W3C. (2023). <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>. Available at:
-                            https://www.w3.org/TR/WCAG21/</li>
-                        <li>JANET. (2024). <em>Acceptable Use Policy</em>. Jisc. Available at:
-                            https://community.jisc.ac.uk/library/acceptable-use-policy</li>
-                        <li>MDN Web Docs. (2024). <em>HTML, CSS, and JavaScript Reference</em>. Mozilla. Available at:
-                            https://developer.mozilla.org</li>
-                    </ul>
-                </section>
+        <!-- References Section -->
+        <article class="editor-article" id="references-section">
+            <h2>📚 References</h2>
+            <ul>
+                <li>United Nations. (2024). <em>Sustainable Development Goal 14: Life Below Water</em>. Available at:
+                    https://sdgs.un.org/goals/goal14</li>
+                <li>Ocean Conservancy. (2024). <em>Fighting for Trash Free Seas</em>. Available at:
+                    https://oceanconservancy.org</li>
+                <li>The Ocean Cleanup. (2024). <em>Developing Advanced Technologies to Rid the Oceans of Plastic</em>.
+                    Available at: https://theoceancleanup.com</li>
+                <li>UNEP. (2024). <em>Marine Litter and Microplastics</em>. United Nations Environment Programme.
+                    Available at:
+                    https://www.unep.org/explore-topics/oceans-seas/what-we-do/addressing-land-based-pollution/marine-litter-and
+                </li>
+                <li>W3C. (2023). <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>. Available at:
+                    https://www.w3.org/TR/WCAG21/</li>
+                <li>JANET. (2024). <em>Acceptable Use Policy</em>. Jisc. Available at:
+                    https://community.jisc.ac.uk/library/acceptable-use-policy</li>
+                <li>MDN Web Docs. (2024). <em>HTML, CSS, and JavaScript Reference</em>. Mozilla. Available at:
+                    https://developer.mozilla.org</li>
+            </ul>
+        </article>
+        </div> <!-- End editor-main-content -->
+        </div> <!-- End editor-layout -->
 
-            
-        </main>
-        <!--Footer-->
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <div class="footer-container">
+            <!-- Left Side: Logo + SDG Text -->
+            <div class="footer-brand">
+                <img src="images/abstract-blue-swirling-vortex-digital-art-piece.png" alt="OceanGuard Logo" class="footer-logo-img">
+                <div class="footer-sdg">
                     <p class="sdg-label">SUSTAINABLE<br>DEVELOPMENT</p>
                     <p class="sdg-goals">G&#127760;ALS</p>
                 </div>
-                <div class="footer-editors">
-                    <h3>Page Editors</h3>
-                    <a href="pageEditor_ST1.html">Student 1</a>
-                    <a href="pageEditor_ST2.html">Student 2</a>
-                    <a href="pageEditor_ST3.html">Student 3</a>
-                    <a href="pageEditor_ST4.html">Student 4</a>
-                </div>
             </div>
-        </footer>
-    </body>
+            <!-- Right Side: Editors -->
+            <div class="footer-editors">
+                <h3>Page Editors</h3>
+                <a href="pageEditor_ST1.html">Student 1</a>
+                <a href="pageEditor_ST2.html">Student 2</a>
+                <a href="pageEditor_ST3.html">Student 3</a>
+                <a href="pageEditor_ST4.html">Student 4</a>
+            </div>
+        </div>
+        <!-- Bottom Section: Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 WebDev Group 4</p>
+        </div>
+    </footer>
+</body>
+
 </html>
