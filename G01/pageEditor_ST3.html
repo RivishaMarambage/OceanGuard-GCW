@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Editor – Student 1 | OceanGuard</title>
+    <title>Page Editor – Student 3 | OceanGuard</title>
     <meta name="description"
-        content="Page editor documentation for Student 1 detailing template structure, pages implemented, accessibility, and meeting logs.">
+        content="Page editor documentation for Student 3 detailing template structure, pages implemented, accessibility, and meeting logs.">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -38,7 +38,7 @@
 
         <!-- Hero Banner -->
         <section class="hero" id="top" aria-label="Page editor banner">
-            <h1>Page Editor – Student 1</h1>
+            <h1>Page Editor – Student 3</h1>
             <p>Documentation of pages implemented, techniques used, accessibility considerations, and team
                 collaboration.</p>
         </section>
@@ -52,8 +52,8 @@
             <ul>
                 <li>Student 1
                     <ul>
-                        <li><a href="#home-page">Home page</a></li>
-                        <li><a href="#gallery-page">Gallery</a></li>
+                        <li><a href="#home-page">Team</a></li>
+                        <li><a href="#gallery-page">Feedback</a></li>
                         <li><a href="#content-page">Content</a></li>
                     </ul>
                 </li>
@@ -69,11 +69,10 @@
             <!-- Student Name and Role -->
             <article class="editor-article">
             <h2>👤 Student Information</h2>
-            <p><strong>Name:</strong> Rivisha Marambage</p>
-            <p><strong>Role:</strong> Student 1 – Template, Home Page, Gallery</p>
-            <p><strong>Student ID:</strong> 20241794 / w2151926</p>
-            <p><strong>Responsibilities:</strong> Designing and implementing the shared HTML template (header,
-                navigation, footer), global CSS stylesheet, Home page, Gallery page, and Content page (Student 1).</p>
+            <p><strong>Name:</strong> Minutha Wettasinghe</p>
+            <p><strong>Role:</strong> Student 3 – Team page, feedback page, content page</p>
+            <p><strong>Student ID:</strong> 20250353 / w2181534</p>
+            <p><strong>Responsibilities:</strong> Designing and implementing the Team page, Feedback page, and Content page & overlooking the overall project coordination as the team lead.</p>
         </article>
 
         <!-- Pages Implemented -->
@@ -81,122 +80,42 @@
             <h2>📄 Pages Implemented</h2>
 
             <!-- Template Structure -->
-            <h3>Shared HTML Template</h3>
-            <p>Every page follows a consistent template structure:</p>
-            <ul>
-                <li><strong>&lt;header&gt;</strong> – Contains the website logo/title and the main navigation bar with
-                    links to all pages.</li>
-                <li><strong>&lt;nav&gt;</strong> – Semantic navigation element with an unordered list of links. Uses
-                    <code>aria-label</code> for accessibility.
-                </li>
-                <li><strong>&lt;main&gt;</strong> – Primary content area unique to each page, identified with
-                    <code>id="main-content"</code>.
-                </li>
-                <li><strong>&lt;footer&gt;</strong> – Contains links to the Page Editor and Validation pages, student
-                    details, and an accessibility link.</li>
-            </ul>
+            <h3>Team Page</h3>
+            <p>This team page was designed to introduce all group members and clearly present their roles and contributions to the website. Each member is represented through a circular image to create a clean and visually engaging layout, while hover effects were implemented using CSS to enhance interactivity. When users hover over a team member, additional details such as their role, assigned pages, and a brief description of their contribution are revealed, improving user experience without cluttering the interface.
+
+In terms of implementation, HTML was used to structure each team member as an individual component, while CSS Flexbox was applied to align the members in a responsive layout. Hover effects and transitions were created using CSS to ensure smooth animations. Accessibility considerations were also included by adding alternative text for images and enabling keyboard focus on each member block. This page demonstrates both visual design consistency and effective use of interactive elements to present team information in a user-friendly manner.
+</p>
+
 
             <!-- Navigation Bar -->
-            <h3>Navigation Bar</h3>
-            <p>The navigation bar is implemented as a flex-based horizontal list inside a <code>&lt;nav&gt;</code>
-                element. Key features include:</p>
-            <ul>
-                <li>Hover effects using CSS <code>:hover</code> pseudo-class with background colour transitions</li>
-                <li>Active page highlighting via a CSS <code>.active</code> class applied to the current page link</li>
-                <li>Responsive wrapping using <code>flex-wrap</code> for smaller screens</li>
-                <li>Keyboard-accessible focus indicators for tab navigation</li>
-            </ul>
+            <h3>FeedBack Page</h3>
+            <p>The Feedback and Program Directory page was designed to provide users with an interactive platform to explore sustainability-related programmes and share their opinions. The page includes a scrollable program section, a ratings and reviews summary, and a feedback form enhanced with JavaScript to improve user interaction. The program cards were structured using HTML and styled with CSS to create a clean and consistent layout, while hover effects were applied to improve visual engagement.
 
-            <!-- Global CSS -->
-            <h3>Global CSS (style.css)</h3>
-            <p>A single CSS file provides consistent styling across all pages. Techniques used:</p>
-            <ul>
-                <li><strong>CSS Custom Properties (Variables):</strong> Defined in <code>:root</code> for colours,
-                    shadows, spacing, and fonts</li>
-                <li><strong>CSS Grid &amp; Flexbox:</strong> Used for responsive card layouts, gallery grids, and
-                    header/footer structure</li>
-                <li><strong>Media Queries:</strong> Breakpoints at 900px (tablet) and 600px (mobile) for responsive
-                    design</li>
-                <li><strong>CSS Transitions &amp; Animations:</strong> Smooth hover effects, card lifts, and modal
-                    entrance animations using <code>@keyframes</code></li>
-                <li><strong>Google Fonts:</strong> Inter for body text and Playfair Display for headings</li>
-                <li><strong>Box-shadow layering:</strong> Multiple shadow levels (sm, md, lg) for depth hierarchy</li>
-            </ul>
+The feedback form was implemented using semantic HTML elements such as fieldsets and labels to ensure proper structure and accessibility. JavaScript was used to enhance the functionality of the form by adding a live character counter for the message input, validating user inputs, and displaying real-time error messages. A success message is shown upon valid submission, providing immediate feedback to the user. These features demonstrate the separation of structure, presentation, and behaviour, as HTML, CSS, and JavaScript are used together to create an interactive and user-friendly experience. Overall, this page reflects both technical implementation and user-centred design.
+</p>
 
             <!-- Home Page -->
-            <h3 id="home-page">Home Page</h3>
-            <h4>Technical Description</h4>
-            <p>The home page uses the shared template and includes:</p>
-            <ul>
-                <li><strong>Hero section:</strong> Full-width banner with gradient background and SVG wave decoration
-                </li>
-                <li><strong>Mission Cards:</strong> Three <code>&lt;article&gt;</code> elements in a CSS Grid, each with
-                    an image, heading, paragraph, and action list</li>
-                <li><strong>Gallery Tiles:</strong> Four clickable tiles linking to content pages with overlay gradient
-                    and hover scale effect</li>
-                <li><strong>Embedded CSS:</strong> Six <code>&lt;style&gt;</code> rules for tile hover animation, card
-                    emphasis, list styling, image overlay, title positioning, and grid layout</li>
-            </ul>
-            <p><strong>HTML tags used:</strong> <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>,
-                <code>&lt;h1&gt;–&lt;h3&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>,
-                <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;div&gt;</code>,
-                <code>&lt;span&gt;</code>
-            </p>
-            <h4>Accessibility</h4>
-            <p>Semantic structuring ensures screen readers can navigate easily. Alt texts were provided for all images, and color contrast ratios were tested to meet WCAG standards. Navigation is keyboard accessible with focus indicators.</p>
-            <p><a href="validation_ST1.html#val-home">Link to the validation page</a></p>
-            <p><a href="home.html">Link to the page</a></p>
+            <h3 id="home-page">Content page</h3>
+            <p>I The Content Page was developed to present detailed information about Ocean Acidification Awareness in a structured and user-friendly format. The page was organised into multiple sections using appropriate HTML heading elements, ensuring a clear hierarchy and logical flow of information. Each section focuses on a specific aspect of the topic, such as its causes, impacts on marine life, and possible solutions, allowing users to easily understand complex environmental issues.
 
-            <!-- Gallery Page -->
-            <h3 id="gallery-page">Gallery Page</h3>
-            <h4>Technical Description</h4>
-            <p>The gallery page includes six ocean conservation images in a responsive grid with full JavaScript
-                interactivity:</p>
-            <ul>
-                <li><strong>Hover highlighting:</strong> <code>mouseenter</code>/<code>mouseleave</code> event listeners
-                    toggle a <code>.highlighted</code> CSS class</li>
-                <li><strong>Click-to-expand modal:</strong> Clicking a thumbnail reads <code>data-*</code> attributes
-                    and populates a modal overlay</li>
-                <li><strong>Close mechanisms:</strong> Close button, clicking outside the modal, and Escape key</li>
-                <li><strong>User customisation:</strong> Font selector (<code>&lt;select&gt;</code>) and colour theme
-                    selector that modify modal styles via JavaScript</li>
-            </ul>
-            <p><strong>JavaScript techniques:</strong> <code>querySelectorAll</code>, <code>addEventListener</code>,
-                <code>classList.add/remove</code>, <code>getAttribute</code>, DOM style manipulation
-            </p>
-            <h4>Accessibility</h4>
-            <p>All gallery items have <code>tabindex="0"</code> and keyboard event listeners for Space and Enter. The modal is assigned <code>role="dialog"</code> and <code>aria-modal="true"</code>, and can be closed using the Escape key to ensure smooth keyboard usability.</p>
-            <p><a href="validation_ST1.html#val-gallery">Link to the validation page</a></p>
-            <p><a href="gallery.html">Link to the page</a></p>
+To improve navigation within the page, internal links were implemented using anchor tags, enabling users to quickly jump between different sections. A “Go to Top” button was also added using CSS positioning to enhance usability, especially for longer content. Relevant images were included to support the text, and each image was provided with meaningful alternative text to ensure accessibility. CSS was used to style the layout, control spacing, and maintain consistency with the overall website design. This page demonstrates effective content structuring, internal navigation, and accessibility considerations while presenting informative and engaging content.
+</p>
 
-            <!-- Content Page -->
-            <h3 id="content-page">Content Page</h3>
-            <h4>Technical Description</h4>
-            <p>The content page covers "Plastic Pollution &amp; Ocean Protection" with:</p>
-            <ul>
-                <li><strong>Internal navigation:</strong> Anchor links to four page sections using <code>id</code>
-                    attributes</li>
-                <li><strong>Four sections:</strong> The Problem, Effects on Marine Life, Student Actions, and Cleanup
-                    Innovations</li>
-                <li><strong>Image-text layouts:</strong> Flexbox-based side-by-side content using the
-                    <code>.content-with-image</code> class
-                </li>
-                <li><strong>Go To Top button:</strong> CSS <code>position: fixed</code> button linked to a top anchor —
-                    no JavaScript used</li>
-            </ul>
-            <h4>Accessibility</h4>
-            <p>High-contrast colors and semantic heading structures improve overall readability. The internal anchor links help users with assistive technologies to seamlessly jump between relevant sections.</p>
-            <p><a href="validation_ST1.html#val-content">Link to the validation page</a></p>
-            <p><a href="content_ST1.html">Link to the page</a></p>
+
         </article>
 
-        <!-- Challenges and Lessons Learned -->
+
         <article class="editor-article" id="challenges-section">
             <h2>🧠 Challenges and Lessons Learned</h2>
-            <p>A primary challenge was implementing the JavaScript gallery modal without relying on external libraries. Tracking focus states and ensuring the modal was fully keyboard-accessible required extensive logic refactoring. From this, I learned the importance of native DOM APIs and ARIA roles for inclusive design.</p>
+            <p>During the development of the website, several challenges were encountered, particularly in implementing interactive features and maintaining a consistent design across all pages. One of the main difficulties was ensuring that hover effects and dynamic elements, such as the team member details and feedback form interactions, functioned correctly without affecting the overall layout. This required careful use of CSS positioning and transitions to avoid layout shifting and ensure a smooth user experience.
+
+Another challenge was integrating JavaScript functionality into the feedback form, including implementing a live character counter and validating user inputs. Initially, handling form validation and displaying error messages in the correct positions proved difficult, but this was resolved by using DOM manipulation and event listeners effectively. Additionally, ensuring accessibility and proper structure, such as using semantic HTML elements, labels, and alternative text, required attention to detail.
+
+Through these challenges, valuable lessons were learned about the importance of separating structure, presentation, and behaviour using HTML, CSS, and JavaScript. The experience also improved problem-solving skills, debugging techniques, and the ability to design user-friendly and interactive web interfaces. Overall, the process contributed to a deeper understanding of modern web development practices.
+</p>
         </article>
 
-        <!-- Accessibility Section -->
+
         <article class="editor-article" id="accessibility-section">
             <h2>♿ Accessibility</h2>
             <ul>

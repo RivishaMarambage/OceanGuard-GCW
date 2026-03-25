@@ -7,7 +7,39 @@
     <link rel="stylesheet" href="feedback.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        .rating-sum{
+            text-align: center;
+            margin: 40px 0;
+            color:white;
+            border: 2px solid rgb(157, 152, 3);
+            background-color: rgb(9, 37, 110);
+            width: 1900px;
+            padding: 50px;
+            justify-content: center;
 
+
+        }
+
+        .rating-sum h2{
+            font-size: 60px;
+            color: rgb(255, 255, 255);
+            margin-bottom: 10px;
+        }
+
+        .rating-sum p{
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .starss {
+            font-size: 2em;
+            color: gold;
+        }
+
+        .rating-sum-content{
+            margin-right: 200px;
+
+        }
 
     </style>
 </head>
@@ -138,71 +170,276 @@
         </div>
     </section>
 
+    <br><br><br><br>
 
-    <section class="feedback">
-        <h1>FEEDBACK</h1><br>
-        <p class="feedback-intro">We value your feedback! Please share your thoughts and suggestions
-                                  to help us improve OceanGuard. Your input is crucial in our mission to<br>
-                                   protect the oceans and create a better future for marine life. Whether
-                                    it's a feature you'd like to see, a bug you've encountered, or just general<br>
-                                     feedback, we want to hear from you. Together, we can make OceanGuard an
-                                     even more powerful tool for ocean conservation!</p>
+    <div class="rating-sum">
+        <div class="rating-sum-content">
+            <h2>8.6/10 Excellent</h2>
+        <p>Based on 1,234 reviews</p>
+
+        <div class="starss">
+             ★ ★ ★ ★ ☆
+
+        </div>
+        </div>
 
 
-        <form action="mailto:minutha12@gmail.com" method="post" class="feedback-form">
-            <div>
+    </div>
 
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required Placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>How did you hear about us?</label>
-                    <select name="source">
-                        <option>Social Media</option>
-                        <option>Friend</option>
-                <option>Website</option>
 
+
+ <br><br><br><br>
+ <h2 class="program-title">Explore Programs</h2>
+
+<div class="programs">
+
+    <!-- CARD 1 -->
+    <div class="program-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913465.png">
+        <h3>Ocean Conservation</h3>
+        <p class="location">📍 Global Initiative</p>
+
+
+
+        <hr>
+
+        <p>⏳ Duration: 2–12 weeks</p>
+        <p>👥 All ages welcome</p>
+
+        <p class="desc">
+            Participate in global efforts to protect marine ecosystems, reduce pollution,
+    and raise awareness about ocean acidification and climate change impacts.
+        </p>
+
+        <div class="buttons">
+            <button class="view">View Project</button>
+            <button class="apply" onclick="joinMsg()">Apply</button>
+        </div>
+    </div>
+
+
+    <!-- CARD 2 -->
+    <div class="program-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149686.png">
+
+        <h3>Coastal Community Support</h3>
+        <p class="location">📍 Local Communities</p>
+
+
+
+        <hr>
+
+        <p>⏳ Duration: 1–8 weeks</p>
+        <p>👥 Volunteers aged 16+</p>
+
+        <p class="desc">
+           Work with coastal communities to promote sustainable fishing practices and
+    educate locals about the effects of ocean acidification on livelihoods.
+        </p>
+
+        <div class="buttons">
+            <button class="view">View Project</button>
+            <button class="apply" onclick="joinMsg()">Apply</button>
+        </div>
+    </div>
+
+
+    <!-- CARD 3 -->
+    <div class="program-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2784/2784489.png">
+        <h3>Marine Research Assistance</h3>
+        <p class="location">📍 Rural Areas</p>
+
+
+
+        <hr>
+
+        <p>⏳ Duration: 2–6 weeks</p>
+        <p>👥 Ages 18+</p>
+
+        <p class="desc">
+               Assist scientists in collecting ocean data, monitoring pH levels, and studying
+    the impact of acidification on marine biodiversity.
+
+        </p>
+
+        <div class="buttons">
+            <button class="view">View Project</button>
+            <button class="apply" onclick="joinMsg()">Apply</button>
+        </div>
+    </div>
+
+
+
+    <div class="program-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3448/3448601.png">
+        <h3>Beach Cleanup Program</h3>
+        <p class="location">📍 Rural Areas</p>
+
+
+
+        <hr>
+
+        <p>⏳ Duration: 2–6 weeks</p>
+        <p>👥 Ages 18+</p>
+
+        <p class="desc">
+            Help remove plastic waste from beaches to prevent pollution and reduce
+    environmental damage that contributes to ocean acidification.
+        </p>
+
+        <div class="buttons">
+            <button class="view">View Project</button>
+            <button class="apply" onclick="joinMsg()">Apply</button>
+        </div>
+    </div>
+    <div class="program-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+        <h3>Ocean Awareness Campaign</h3>
+        <p class="location">📍 Rural Areas</p>
+
+
+
+        <hr>
+
+        <p>⏳ Duration: 2–6 weeks</p>
+        <p>👥 Ages 18+</p>
+
+        <p class="desc">
+           Create campaigns, social media content, and presentations to educate others
+    about ocean acidification and climate change impacts.
+        </p>
+
+        <div class="buttons">
+            <button class="view">View Project</button>
+            <button class="apply" onclick="joinMsg()">Apply</button>
+        </div>
+    </div>
+    <div class="program-card">
+       <img src="https://cdn-icons-png.flaticon.com/512/616/616490.png">
+
+        <h3>Coral Reef Restoration</h3>
+        <p class="location">📍 Rural Areas</p>
+
+
+
+        <hr>
+
+        <p>⏳ Duration: 2–6 weeks</p>
+        <p>👥 Ages 18+</p>
+
+        <p class="desc">
+             Support coral reef restoration projects and help rebuild ecosystems affected
+    by ocean acidification and environmental damage.
+        </p>
+
+        <div class="buttons">
+            <button class="view">View Project</button>
+            <button class="apply" onclick="joinMsg()">Apply</button>
+        </div>
+    </div>
+
+</div>
+
+<p id="joinMessage"></p>
+
+<p id="joinMessage"></p>
+
+
+<br><br>
+   <section class="form">
+    <h1>
+    We Value Your Feedback!
+    </h1>
+      <form id="feedbackForm">
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            <span class="error" id="nameError"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <span class="error" id="emailError"></span>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required placeholder="Enter your address">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback Details </legend>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" name="message" maxlength="100" required placeholder="Share your thoughts about OceanGuard"></textarea>
+            <p id="counter"> 100 characters remaining</p>
+
+            <label for="source">How did you hear about us?</label>
+            <select id="source">
+                <option value="social-media">Social Media</option>
+                <option value="friend">Friend/Family</option>
+                <option value="search">Search Engine</option>
+                <option value="other">Other</option>
             </select>
-             <div class="rating">
-                <span data-value="1">★</span>
-                <span data-value="2">★</span>
-                <span data-value="3">★</span>
-                <span data-value="4">★</span>
-                <span data-value="5">★</span>
-            </div>
 
-            <input type="hidden" name="rating" id="ratingValue">
-            </div>
+            <label for="date">Date: </label>
+            <input type="date" id="date" name="date">
 
-            <button type="submit">Submit Feedback</button>
-        </form>
+            <label for="datetime">Date & Time:</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+        </fieldset>
+        <button type="submit">Submit Feedback</button>
 
-    </section>
-    <script>
-        const stars = document.querySelectorAll(".rating span");
-        const ratingValue = document.getElementById("ratingValue");
+        <p id="successMsg"></p>
+      </form>
+   </section>
 
-        stars.forEach((star, index) => {
-            star.addEventListener("click", () => {
-                ratingValue.value = index + 1;
+   <script>
+       const message = document.getElementById('message');
+         const counter = document.getElementById('counter');
 
-                stars.forEach(s => s.classList.remove("active"));
+         message.addEventListener('input', () => {
+             const remaining = 100 - message.value.length;
+             counter.textContent = `${remaining} characters remaining`;
+         });
 
-                for (let i = 0; i <= index; i++) {
-                    stars[i].classList.add("active");
-                }
-            });
-        });
-    </script>
+         document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+             event.preventDefault();
+             document.getElementById('successMsg').textContent = 'Thank you for your feedback!';
+         });
+
+         let valid = true;
+
+         let name = document.getElementById("name").value;
+         let email = document.getElementById("email").value;
+
+         if(name === ""){
+             document.getElementById("nameError").textContent = "Name is required";
+             valid = false;
+         } else {
+             document.getElementById("nameError").textContent = "";
+         }
+
+         if(email === ""){
+             document.getElementById("emailError").textContent = "Email is required";
+             valid = false;
+         } else {
+             document.getElementById("emailError").textContent = "";
+         }
+
+         if(valid){
+             document.getElementById('successMsg').textContent = 'Thank you for your feedback!';
+         }
+
+
+
+   </script>
+
 
 <!-- ===== Footer ===== -->
  <footer>
